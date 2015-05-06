@@ -25,6 +25,7 @@ class WardrobeViewController: UIViewController, UITableViewDelegate, UITableView
     {
         var wardrobeCell = tableView.dequeueReusableCellWithIdentifier("Wardrobe", forIndexPath: indexPath) as UITableViewCell
         wardrobeCell.textLabel?.text = wardrobeArray[indexPath.row]
+        wardrobeCell.textLabel?.textAlignment = NSTextAlignment.Center
         
         return wardrobeCell
     }
