@@ -8,28 +8,30 @@
 
 import UIKit
 
-class WardrobeViewController: UIViewController {
+class WardrobeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+{
 
-    override func viewDidLoad() {
+    @IBOutlet weak var wardrobeTable: UITableView!
+    
+    var wardrobeArray = ["shirts", "pants", "shoes"]
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        var wardrobeCell = tableView.dequeueReusableCellWithIdentifier("Wardrobe", forIndexPath: indexPath) as UITableViewCell
+        wardrobeCell.textLabel?.text = wardrobeArray[indexPath.row]
+        
+        return wardrobeCell
     }
-    */
-
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return wardrobeArray.count
+    }
+  
 }

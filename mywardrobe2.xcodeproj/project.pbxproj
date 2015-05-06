@@ -81,8 +81,8 @@
 			children = (
 				3F446DC71AF2A0EB000CF28B /* AppDelegate.swift */,
 				3F446DC91AF2A0EB000CF28B /* ViewController.swift */,
-				3F446DCB1AF2A0EB000CF28B /* Main.storyboard */,
 				3F9271FE1AF3EAFC003DD73C /* WardrobeViewController.swift */,
+				3F446DCB1AF2A0EB000CF28B /* Main.storyboard */,
 				3F446DCE1AF2A0EC000CF28B /* Images.xcassets */,
 				3F446DD01AF2A0EC000CF28B /* LaunchScreen.xib */,
 				3F446DC51AF2A0EB000CF28B /* Supporting Files */,
