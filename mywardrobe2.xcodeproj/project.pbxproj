@@ -15,6 +15,7 @@
 		3F446DDE1AF2A0EC000CF28B /* mywardrobe2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F446DDD1AF2A0EC000CF28B /* mywardrobe2Tests.swift */; };
 		3F6A255A1B011F9700CA2AF9 /* WardrobeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A25591B011F9700CA2AF9 /* WardrobeDetailViewController.swift */; };
 		3F9271FF1AF3EAFC003DD73C /* WardrobeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9271FE1AF3EAFC003DD73C /* WardrobeViewController.swift */; };
+		3FA887E31B05104F00E680CC /* Wardrobe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA887E21B05104F00E680CC /* Wardrobe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		3F446DDD1AF2A0EC000CF28B /* mywardrobe2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mywardrobe2Tests.swift; sourceTree = "<group>"; };
 		3F6A25591B011F9700CA2AF9 /* WardrobeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WardrobeDetailViewController.swift; sourceTree = "<group>"; };
 		3F9271FE1AF3EAFC003DD73C /* WardrobeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WardrobeViewController.swift; sourceTree = "<group>"; };
+		3FA887E21B05104F00E680CC /* Wardrobe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wardrobe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		3F446DB91AF2A0EB000CF28B = {
 			isa = PBXGroup;
 			children = (
+				3FA887E21B05104F00E680CC /* Wardrobe.swift */,
 				3F446DC41AF2A0EB000CF28B /* mywardrobe2 */,
 				3F446DDA1AF2A0EC000CF28B /* mywardrobe2Tests */,
 				3F446DC31AF2A0EB000CF28B /* Products */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA887E31B05104F00E680CC /* Wardrobe.swift in Sources */,
 				3F446DCA1AF2A0EB000CF28B /* ViewController.swift in Sources */,
 				3F6A255A1B011F9700CA2AF9 /* WardrobeDetailViewController.swift in Sources */,
 				3F446DC81AF2A0EB000CF28B /* AppDelegate.swift in Sources */,
