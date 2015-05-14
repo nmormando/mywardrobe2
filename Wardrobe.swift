@@ -10,9 +10,11 @@ import UIKit
 
 class Wardrobe: UIViewController {
 
+    
     var pantsName = ""
     var shirtsName = ""
     var accesoriesName = ""
+    
     
     
 
