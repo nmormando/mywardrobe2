@@ -19,14 +19,17 @@ class WardrobeViewController: UIViewController, UITableViewDelegate, UITableView
     {
         super.viewDidLoad()
         imagePicker.delegate = self
+        
+        var type = ["pants", "shirts", "shoes"]
+
     }
     
-    var wardrobeArray = ["shirts", "pants", "shoes"]
+    var wardrobeArray : [Wardrobe] = []
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var wardrobeCell = tableView.dequeueReusableCellWithIdentifier("Wardrobe", forIndexPath: indexPath) as UITableViewCell
-        wardrobeCell.textLabel?.text = wardrobeArray[indexPath.row]
+        var wardrobeCell = tableView.dequeueReusableCellWithIdentifier("Wardrobe", forIndexPath: indexPath) as! UITableViewCell
+        wardrobeCell.textLabel.text = wardrobeArray[indexPath.row].type
         wardrobeCell.textLabel?.textAlignment = NSTextAlignment.Center
         
         return wardrobeCell
@@ -76,7 +79,7 @@ class WardrobeViewController: UIViewController, UITableViewDelegate, UITableView
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject])
     {
         imagePicker.dismissViewControllerAnimated(true, completion: {
-            var selectedImage = info[UIImagePickerControllerOriginalImage] as UIImage
+            var selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
             self.shoesImageView.image = selectedImage
             println("image selected")})
     }
