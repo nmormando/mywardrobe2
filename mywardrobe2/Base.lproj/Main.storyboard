@@ -89,7 +89,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="mT6-d1-DL6">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="hKI-eG-Lsc"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hKI-eG-Lsc"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -119,13 +119,13 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="l6f-Tn-PJs" imageView="Owm-m9-oHM" rowHeight="103" style="IBUITableViewCellStyleDefault" id="ypB-Qd-c4A">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PantsCell" textLabel="l6f-Tn-PJs" imageView="Owm-m9-oHM" rowHeight="103" style="IBUITableViewCellStyleDefault" id="ypB-Qd-c4A">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ypB-Qd-c4A" id="zbo-6n-APN">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="pants" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l6f-Tn-PJs">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Pants" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l6f-Tn-PJs">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
