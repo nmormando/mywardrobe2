@@ -24,6 +24,11 @@ class WardrobeViewController: UIViewController, UITableViewDelegate, UITableView
 
     }
     
+    //append shoes shirt accessories shoes to wardrobe array
+    
+    
+    
+    
     var wardrobeArray : [Wardrobe] = []
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
