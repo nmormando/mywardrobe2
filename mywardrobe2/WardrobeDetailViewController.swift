@@ -12,26 +12,28 @@ class WardrobeDetailViewController: UIViewController, UITableViewDelegate, UITab
 {
     
     
-    
+    let imagePicker = UIImagePickerController()
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        
         
     }
 
+    var wardrobeArray : [Wardrobe] = []
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var wardrobeDetailCell = tableView.dequeueReusableCellWithIdentifier("String", forIndexPath: indexPath) as! UITableViewCell
-        return
+        var wardrobeDetailCell = tableView.dequeueReusableCellWithIdentifier("PantsCell", forIndexPath: indexPath) as! UITableViewCell
+        
+        return wardrobeDetailCell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        //return wardrobeArray.count
+        return wardrobeArray.count
     }
     
 

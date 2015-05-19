@@ -16,6 +16,14 @@ class Wardrobe: UIViewController {
     var accesoriesName = ""
     
     
+    convenience init(pantsName: String, shirtsName: String, accesoriesName: String)
+    {
+        self.init()
+        self.pantsName = pantsName
+        self.shirtsName = shirtsName
+        self.accesoriesName = accesoriesName
+    }
+    
     
 
 

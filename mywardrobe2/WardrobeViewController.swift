@@ -29,7 +29,7 @@ class WardrobeViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         var wardrobeCell = tableView.dequeueReusableCellWithIdentifier("Wardrobe", forIndexPath: indexPath) as! UITableViewCell
-        wardrobeCell.textLabel.text = wardrobeArray[indexPath.row].type
+        wardrobeCell.textLabel!.text = wardrobeArray[indexPath.row].pantsName
         wardrobeCell.textLabel?.textAlignment = NSTextAlignment.Center
         
         return wardrobeCell
