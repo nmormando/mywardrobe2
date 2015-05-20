@@ -8,17 +8,35 @@
 
 import UIKit
 
-class WardrobeDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class WardrobeDetailViewController: UIViewController, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource
 {
     
+//    @IBOutlet weak var categoryCellView: UITableViewCell!
     
     let imagePicker = UIImagePickerController()
     
+    var wardrobeDVC : Wardrobe!
+    
+//    @IBOutlet weak var categoryCellView2: UIView!
+//    @IBOutlet weak var categoryCellView: UITableViewCell!
+    
+    
+//    @IBAction func saveButtonTapped(sender: AnyObject)
+//    {
+//        college.name = collegeTextField.text
+//        college.location = locationTextField.text
+//        college.students = studentTextField.text.toInt()!
+//    }
+    
+
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
+        
+        
+     
         
     }
 
@@ -31,6 +49,17 @@ class WardrobeDetailViewController: UIViewController, UITableViewDelegate, UITab
         return wardrobeDetailCell
     }
     
+
+    
+//    super.viewDidLoad()
+//    
+//    collegeTextField.text = college.name
+//    locationTextField.text = college.location
+//    studentTextField.text = String(college.students)
+//    imageView.image = college.image
+//    
+//    imagePicker.delegate = self
+//    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return wardrobeArray.count

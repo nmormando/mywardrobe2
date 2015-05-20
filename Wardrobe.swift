@@ -11,20 +11,14 @@ import UIKit
 class Wardrobe: UIViewController {
 
     
-    var pantsName = ""
-    var shirtsName = ""
-    var accesoriesName = ""
+    var clothesType = ""
     
-    
-    convenience init(pantsName: String, shirtsName: String, accesoriesName: String)
+    convenience init(clothesType: String)
     {
         self.init()
-        self.pantsName = pantsName
-        self.shirtsName = shirtsName
-        self.accesoriesName = accesoriesName
+        
+        self.clothesType = clothesType
     }
     
     
-
-
 }

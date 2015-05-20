@@ -10,6 +10,7 @@ import UIKit
 
 class WardrobeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate,UINavigationControllerDelegate
 {
+    @IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var shoesImageView: UIImageView!
     @IBOutlet weak var wardrobeTable: UITableView!
    
@@ -20,11 +21,15 @@ class WardrobeViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         imagePicker.delegate = self
         
+        editButton.tag = 0
+        
         var type = ["pants", "shirts", "shoes"]
-
+        
+        wardrobeArray.append(Wardrobe(clothesType: "Pants"))
+        wardrobeArray.append(Wardrobe(clothesType: "Shirts"))
+        wardrobeArray.append(Wardrobe(clothesType: "Accesories"))
+        
     }
-    
-    //append shoes shirt accessories shoes to wardrobe array
     
     
     
@@ -34,7 +39,7 @@ class WardrobeViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         var wardrobeCell = tableView.dequeueReusableCellWithIdentifier("Wardrobe", forIndexPath: indexPath) as! UITableViewCell
-        wardrobeCell.textLabel!.text = wardrobeArray[indexPath.row].pantsName
+        wardrobeCell.textLabel!.text = wardrobeArray[indexPath.row].clothesType
         wardrobeCell.textLabel?.textAlignment = NSTextAlignment.Center
         
         return wardrobeCell
@@ -89,5 +94,64 @@ class WardrobeViewController: UIViewController, UITableViewDelegate, UITableView
             println("image selected")})
     }
 
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if editingStyle == UITableViewCellEditingStyle.Delete
+        {
+            wardrobeArray.removeAtIndex(indexPath.row)
+            tableView.reloadData()
+        }
+    }
 
+    @IBAction func plusButtonTapped(sender: UIBarButtonItem)
+    {
+        var alert = UIAlertController(title: "Add Clothing Category", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        
+        var cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+        alert.addAction(cancelAction)
+        
+        var addAction = UIAlertAction(title: "Add", style: UIAlertActionStyle.Default) { (action) -> Void in
+            var categoryTextField = alert.textFields?[0] as! UITextField
+            
+            self.wardrobeArray.append(Wardrobe(clothesType: categoryTextField.text))
+            self.wardrobeTable.reloadData()
+        }
+        
+        alert.addAction(addAction)
+        
+        alert.addTextFieldWithConfigurationHandler { (textField) -> Void in textField.placeholder = "Add New Category Here"}
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+
+    
+    
+    func tableView(tableView:UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath)
+    {
+        var wardrobe = wardrobeArray[sourceIndexPath.row]
+        wardrobeArray.removeAtIndex(sourceIndexPath.row)
+        wardrobeArray.insert(wardrobe, atIndex: destinationIndexPath.row)
+    }
+
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var dvc = segue.destinationViewController as! WardrobeDetailViewController
+        var index = wardrobeTable.indexPathForSelectedRow()?.row
+        dvc.wardrobeDVC = wardrobeArray[index!]
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }
