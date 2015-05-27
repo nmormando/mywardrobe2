@@ -89,10 +89,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="mT6-d1-DL6">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hKI-eG-Lsc"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="MXL-Vk-aH5"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hKI-eG-Lsc">
+                            <connections>
+                                <action selector="plusButtonTapped:" destination="ykI-Na-LYO" id="aTN-ZX-MiP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="editButton" destination="MXL-Vk-aH5" id="CGf-6u-3Vn"/>
                         <outlet property="wardrobeTable" destination="pg9-Du-dOX" id="gNg-lg-z5w"/>
                     </connections>
                 </viewController>
@@ -100,7 +106,7 @@
             </objects>
             <point key="canvasLocation" x="1684.5" y="290.5"/>
         </scene>
-        <!--Title-->
+        <!--Category-->
         <scene sceneID="66M-8u-Cgj">
             <objects>
                 <viewController id="WLu-js-asg" customClass="WardrobeDetailViewController" customModule="mywardrobe2" customModuleProvider="target" sceneMemberID="viewController">
@@ -142,7 +148,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="jN4-Wi-lGI">
+                    <navigationItem key="navigationItem" title="Category" id="jN4-Wi-lGI">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="KU1-8Z-1cB"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

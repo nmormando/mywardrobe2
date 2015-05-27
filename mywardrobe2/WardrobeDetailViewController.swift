@@ -8,16 +8,20 @@
 
 import UIKit
 
-class WardrobeDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class WardrobeDetailViewController: UIViewController, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource
 {
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        
+        
+        
+     
         
     }
 
+    var wardrobeArray : [Wardrobe] = []
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
@@ -25,6 +29,17 @@ class WardrobeDetailViewController: UIViewController, UITableViewDelegate, UITab
         return wardrobeDetailCell
     }
     
+
+    
+//    super.viewDidLoad()
+//    
+//    collegeTextField.text = college.name
+//    locationTextField.text = college.location
+//    studentTextField.text = String(college.students)
+//    imageView.image = college.image
+//    
+//    imagePicker.delegate = self
+//    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return wardrobeArray.count
