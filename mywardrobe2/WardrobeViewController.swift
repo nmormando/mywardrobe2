@@ -8,6 +8,10 @@
 
 import UIKit
 
+
+var wardrobeArray : [Wardrobe] = []
+var type = ["pants", "shirts", "shoes"]
+
 class WardrobeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate,UINavigationControllerDelegate
 {
     @IBOutlet weak var shoesImageView: UIImageView!
@@ -20,16 +24,14 @@ class WardrobeViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         imagePicker.delegate = self
         
-        var type = ["pants", "shirts", "shoes"]
-
+       
     }
     
-    var wardrobeArray : [Wardrobe] = []
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         var wardrobeCell = tableView.dequeueReusableCellWithIdentifier("Wardrobe", forIndexPath: indexPath) as! UITableViewCell
-        wardrobeCell.textLabel.text = wardrobeArray[indexPath.row].type
+        wardrobeCell.textLabel!.text = type[indexPath.row]
         wardrobeCell.textLabel?.textAlignment = NSTextAlignment.Center
         
         return wardrobeCell
@@ -37,7 +39,7 @@ class WardrobeViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return wardrobeArray.count
+        return type.count
     }
     
     func cameraButtonTapped()

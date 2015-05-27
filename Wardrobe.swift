@@ -14,9 +14,6 @@ class Wardrobe: UIViewController {
     var pantsName = ""
     var shirtsName = ""
     var accesoriesName = ""
-    
-    
-    
-
+    var type = ""
 
 }

@@ -11,10 +11,6 @@ import UIKit
 class WardrobeDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     
-    
-    
-    
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -26,19 +22,12 @@ class WardrobeDetailViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         var wardrobeDetailCell = tableView.dequeueReusableCellWithIdentifier("String", forIndexPath: indexPath) as! UITableViewCell
-        return
+        return wardrobeDetailCell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        //return wardrobeArray.count
+        return wardrobeArray.count
     }
-    
-
-    
-    
-    
-    
-    
 
  }
