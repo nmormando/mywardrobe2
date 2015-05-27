@@ -25,14 +25,25 @@ class WardrobeViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         imagePicker.delegate = self
         
-       
+        editButton.tag = 0
+        
+        var type = ["pants", "shirts", "shoes"]
+        
+        wardrobeArray.append(Wardrobe(clothesType: "Pants"))
+        wardrobeArray.append(Wardrobe(clothesType: "Shirts"))
+        wardrobeArray.append(Wardrobe(clothesType: "Accesories"))
+        
     }
     
+    
+    
+    
+    var wardrobeArray : [Wardrobe] = []
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         var wardrobeCell = tableView.dequeueReusableCellWithIdentifier("Wardrobe", forIndexPath: indexPath) as! UITableViewCell
-        wardrobeCell.textLabel!.text = type[indexPath.row]
+        wardrobeCell.textLabel!.text = wardrobeArray[indexPath.row].clothesType
         wardrobeCell.textLabel?.textAlignment = NSTextAlignment.Center
         
         return wardrobeCell
